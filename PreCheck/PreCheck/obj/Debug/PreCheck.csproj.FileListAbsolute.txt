@@ -1,0 +1,8 @@
+D:\Projects\PreCheck\PreCheck\bin\PreCheck.dll.config
+D:\Projects\PreCheck\PreCheck\bin\PreCheck.dll
+D:\Projects\PreCheck\PreCheck\bin\PreCheck.pdb
+D:\Projects\PreCheck\PreCheck\bin\Newtonsoft.Json.dll
+D:\Projects\PreCheck\PreCheck\bin\Newtonsoft.Json.xml
+D:\Projects\PreCheck\PreCheck\obj\Debug\PreCheck.csprojResolveAssemblyReference.cache
+D:\Projects\PreCheck\PreCheck\obj\Debug\PreCheck.dll
+D:\Projects\PreCheck\PreCheck\obj\Debug\PreCheck.pdb

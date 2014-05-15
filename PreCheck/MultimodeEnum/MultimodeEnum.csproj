@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A805F052-B9DD-4C27-B172-24B3F4FE12C8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultimodeEnum</RootNamespace>
+    <AssemblyName>MultimodeEnum</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(MSBuildThisFileDirectory)..\.build</MSBuildCommunityTasksPath>
+    <My-PropertiesDir>Properties</My-PropertiesDir>
+    <Major>2</Major>
+    <Minor>1</Minor>
+    <MyBuildNo></MyBuildNo>
+  </PropertyGroup>
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets"/>
+  <Target Name="BeforeBuild">
+    <Time Format="2.1.yyMM.HHmm">
+      <Output TaskParameter="FormattedTime" PropertyName="My-VersionNumber" />
+    </Time>
+    <Message Text="Building $(My-VersionNumber) ...">
+    </Message>
+    <ItemGroup>
+      <My-AssemblyInfo Include="$(My-PropertiesDir)\AssemblyVersionInfo.cs" />
+      <Compile Include="@(My-AssemblyInfo)" />
+    </ItemGroup>
+    <MakeDir Directories="$(My-PropertiesDir)" />
+    <AssemblyInfo OutputFile="@(My-AssemblyInfo)"
+          CodeLanguage="CS"
+          AssemblyFileVersion="$(My-VersionNumber)"
+          AssemblyInformationalVersion="$(Major).$(Minor).$(MyBuildNo)"
+          Condition="$(My-VersionNumber) != '' "
+          />
+  </Target>
+  <Target Name="AfterBuild">
+    <Delete Files="@(My-AssemblyInfo)" />
+  </Target>
+  <!--<Target Name="HelloWorld">
+    <Message Text="Configuration is $(Configuration)" />
+    <Message Text="MSBuildToolsPath is $(MSBuildToolsPath)" />
+    <Message Text="BuildNo is $(MyBuildNo)" />
+  </Target>-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

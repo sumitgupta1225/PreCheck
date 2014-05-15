@@ -1,0 +1,6 @@
+D:\Projects\PreCheck\MultimodeEnum\bin\Debug\MultimodeEnum.exe.config
+D:\Projects\PreCheck\MultimodeEnum\bin\Debug\MultimodeEnum.exe
+D:\Projects\PreCheck\MultimodeEnum\bin\Debug\MultimodeEnum.pdb
+D:\Projects\PreCheck\MultimodeEnum\obj\Debug\MultimodeEnum.exe
+D:\Projects\PreCheck\MultimodeEnum\obj\Debug\MultimodeEnum.pdb
+D:\Projects\PreCheck\MultimodeEnum\obj\Debug\MultimodeEnum.csprojResolveAssemblyReference.cache

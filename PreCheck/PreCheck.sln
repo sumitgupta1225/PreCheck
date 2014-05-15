@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreCheck", "PreCheck\PreCheck.csproj", "{B4EC020B-9324-43C0-92E3-64DC9CC552B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultimodeEnum", "MultimodeEnum\MultimodeEnum.csproj", "{A805F052-B9DD-4C27-B172-24B3F4FE12C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{685521C1-4826-411E-B921-1872F36FFF9C}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4EC020B-9324-43C0-92E3-64DC9CC552B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EC020B-9324-43C0-92E3-64DC9CC552B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EC020B-9324-43C0-92E3-64DC9CC552B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EC020B-9324-43C0-92E3-64DC9CC552B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A805F052-B9DD-4C27-B172-24B3F4FE12C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A805F052-B9DD-4C27-B172-24B3F4FE12C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A805F052-B9DD-4C27-B172-24B3F4FE12C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A805F052-B9DD-4C27-B172-24B3F4FE12C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
